@@ -69,6 +69,22 @@ Assert.AreEqual("value", value,"Value did not match!");
     4.4 Verify project names in build and test steps
 
     4.5 Save and trigger build
-    
+
 5. Create Release Pipeline and "Release" (Deploy)
 	on azure app service.
+
+    5.1 In Azure DevOps Portal, Goto `Pipelines` and then click `Releases` 
+
+    5.2 Click `New Pipeline` button And then select template `Azure AppService deployment` and click Apply
+
+    5.3 You need following details:
+
+    ```ini
+    Azure-Subscription= Choose azure subscription and authorize access to devops
+    App-Service-Name= Name of Azure AppService (Use drop down)
+    ```
+
+    5.4 Save the pipeline and use `Release` button to create the release
+
+    5.5 Once release is done, use `Deploy` button to start the deployment.
+    
