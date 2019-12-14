@@ -38,6 +38,11 @@ Container Orchestration Engines
 	$ download .kube/config
 	```
 
+On local system, copy this "config" file into C:\Users\{YOURNAME}\.kube folder
+	Open CMD (Command prompt)
+	$ mkdir .kube
+	$ copy downloads\config .kube\config
+
 Download kubectl on local machine from URL:
 https://storage.googleapis.com/kubernetes-release/release/v1.14.8/bin/windows/amd64/kubectl.exe
 
