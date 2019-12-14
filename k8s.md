@@ -25,6 +25,7 @@ Container Orchestration Engines
      AKS (Cloud)
 
  AKS Creation:
+	```cmd
 	# Create a resource group
 	$ az group create -n my_aks -l southeastasia
 	# Create aks
@@ -32,17 +33,21 @@ Container Orchestration Engines
 
 	# Get AKS Credentials (YAML)
 	$ az aks get-credentials -n aks12001 -g my_aks
-	
+
 	# Download to local system
 	$ download .kube/config
+	```
 
-	Download kubectl on local machine from URL:
-	https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/windows/amd64/kubectl.exe
+Download kubectl on local machine from URL:
+https://storage.googleapis.com/kubernetes-release/release/v1.14.8/bin/windows/amd64/kubectl.exe
 
-	Once downloaded, Keep kubectl in directory C:\kube
-	From command prompt use command:
+Once downloaded, Keep kubectl in directory C:\kube
+From command prompt use command:
+
+	```cmd
 	$ set path=%path%;c:\kube
 	$ kubectl cluster-info
+	```
 
 
 
