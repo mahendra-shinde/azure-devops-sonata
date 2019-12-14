@@ -66,3 +66,25 @@
 
 17. Test the newly created azure app service in web browser, you should get message `Hello Bengalurur`
 
+18. On Azure DevOps portal, use Release pipelines to create a new pipeline
+    Use template `Azure App Service deployment`
+
+19. Click on Build Artifacts and choose option "Docker Hub" provide following details:
+    ```yml
+    Service-connection: reg1 (Service Connection)
+    Namespace:  mahendrshinde   (Docker ID)
+    Repository: mahendrshinde/static-app1     (Projectname)
+    Default-Version: Specify at the time of release
+    ```
+
+20. CLick on `Stage1` and provide details:
+    ```yml
+    Azure-Subscription : choose your azure subscription and authorize it
+    App-Type:   WebApp for Containers (Linux)
+    App-Service-Name: AppService created
+    Registry-or-Namespace: mahendrshinde (Docker ID)
+    Repository: static-app1 (Projectname)
+    ```
+
+21. Click on `Save` and then `Create Release` choose image version (TAG) from dropdown 
+21. Once release is created, use `Deploy` button to start the deployment.
